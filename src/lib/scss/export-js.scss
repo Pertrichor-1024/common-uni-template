@@ -1,0 +1,9 @@
+@use 'variables';
+
+$vars: module-variables('variables');
+
+export default {
+  @each $k, $v in $vars {
+    #{to-upper-case("'#{$k}'")}: '#{$v}';
+  }
+}

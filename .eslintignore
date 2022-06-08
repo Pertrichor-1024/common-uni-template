@@ -1,0 +1,8 @@
+dist/*
+public/*
+static/*
+*.js
+
+src/uni_modules/*
+src/uview-ui/*
+src/components/sc-upload/*

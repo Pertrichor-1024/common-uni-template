@@ -1,0 +1,52 @@
+@import 'theme.scss';
+
+$black: #000 !default;
+$white: #fff !default;
+$gray-1: #f7f8fa !default;
+$gray-2: #f2f3f5 !default;
+$gray-3: #ebedf0 !default;
+$gray-4: #dcdee0 !default;
+$gray-5: #c8c9cc !default;
+$gray-6: #969799 !default;
+$gray-7: #646566 !default;
+$gray-8: #323233 !default;
+$placeholder: $gray-5 !default;
+
+$primary: #1989fa !default;
+$red: #ee0a24 !default;
+$orange: #ed6a0c !default;
+$yellow: #ffd01e !default;
+$green: #07c160 !default;
+
+$primary-light-1: mix($white, $primary, 10%) !default; // #3095fb;
+$primary-light-2: mix($white, $primary, 20%) !default; // #47a1fb;
+$primary-light-3: mix($white, $primary, 30%) !default; // #5eacfc;
+$primary-light-4: mix($white, $primary, 40%) !default; // #75b8fc;
+$primary-light-5: mix($white, $primary, 50%) !default; // #8cc4fd;
+$primary-light-6: mix($white, $primary, 60%) !default; // #a3d0fd;
+$primary-light-7: mix($white, $primary, 70%) !default; // #badcfe;
+$primary-light-8: mix($white, $primary, 80%) !default; // #d1e7fe;
+$primary-light-9: mix($white, $primary, 90%) !default; // #e8f3ff;
+
+$red-soft: mix($white, $red, 20%) !default; // #f13b50;
+$red-light: mix($white, $red, 50%) !default; // #f56c7c;
+$red-lighter: mix($white, $red, 70%) !default; // #f89da7;
+$red-extra-light: mix($white, $red, 90%) !default; // #fcced3;
+
+$green-soft: mix($white, $green, 20%) !default; // #39cd80
+$green-light: mix($white, $green, 50%) !default; // #6adaa0
+$green-lighter: mix($white, $green, 70%) !default; // #9ce6bf
+$green-extra-light: mix($white, $green, 90%) !default; // #cdf3df
+
+$yellow-soft: mix($white, $yellow, 20%) !default; // #ffd94b;
+$yellow-light: mix($white, $yellow, 50%) !default; // #ffe378;
+$yellow-lighter: mix($white, $yellow, 70%) !default; // #ffeca5;
+$yellow-extra-light: mix($white, $yellow, 90%) !default; // #fff6d2;
+
+$orange-soft: mix($white, $orange, 20%) !default; // #f1883d;
+$orange-light: mix($white, $orange, 50%) !default; // #f4a66d;
+$orange-lighter: mix($white, $orange, 70%) !default; // #f8c39e;
+$orange-extra-light: mix($white, $orange, 90%) !default; // #fbe1ce;
+
+$border-color: $gray-3 !default;
+$background-color: $gray-1 !default;

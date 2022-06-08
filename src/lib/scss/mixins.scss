@@ -1,0 +1,8 @@
+@import 'theme.scss';
+
+$unitSize: 1 !default;
+$unitType: 'px' !default;
+
+@function unit($num) {
+  @return #{$num * $unitSize}#{$unitType};
+}

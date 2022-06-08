@@ -1,0 +1,107 @@
+@import './mixins.scss';
+
+$position: (
+  top: t,
+  bottom: b,
+  left: l,
+  right: r,
+  horizontal: h,
+  vertical: v,
+);
+
+$multiple: 5;
+
+@for $i from 0 through 10 {
+  .m-#{$i*$multiple} {
+    margin: unit($i * $multiple);
+  }
+  .p-#{$i*$multiple} {
+    padding: unit($i * $multiple);
+  }
+
+  @each $key, $val in $position {
+    @if $val == h {
+      .mh-#{$i*$multiple} {
+        margin-left: unit($i * $multiple);
+        margin-right: unit($i * $multiple);
+      }
+      .ph-#{$i*$multiple} {
+        padding-left: unit($i * $multiple);
+        padding-right: unit($i * $multiple);
+      }
+    } @else if $val==v {
+      .mv-#{$i*$multiple} {
+        margin-top: unit($i * $multiple);
+        margin-bottom: unit($i * $multiple);
+      }
+      .pv-#{$i*$multiple} {
+        padding-top: unit($i * $multiple);
+        padding-bottom: unit($i * $multiple);
+      }
+    } @else {
+      .m#{$val}-#{$i*$multiple} {
+        margin-#{$key}: unit($i * $multiple);
+      }
+      .p#{$val}-#{$i*$multiple} {
+        padding-#{$key}: unit($i * $multiple);
+      }
+    }
+  }
+}
+@for $i from 1 through 4 {
+  .m-#{$i} {
+    margin: unit($i);
+  }
+  .p-#{$i} {
+    padding: unit($i);
+  }
+
+  @each $key, $val in $position {
+    @if $val == h {
+      .m#{$val}-#{$i} {
+        margin-left: unit($i);
+        margin-right: unit($i);
+      }
+      .p#{$val}-#{$i} {
+        padding-left: unit($i);
+        padding-right: unit($i);
+      }
+    } @else if $val == v {
+      .m#{$val}-#{$i} {
+        margin-top: unit($i);
+        margin-bottom: unit($i);
+      }
+      .p#{$val}-#{$i} {
+        padding-top: unit($i);
+        padding-bottom: unit($i);
+      }
+    } @else {
+      .m#{$val}-#{$i} {
+        margin-#{$key}: unit($i);
+      }
+      .p#{$val}-#{$i} {
+        padding-#{$key}: unit($i);
+      }
+    }
+  }
+}
+
+.safeAreaFooter {
+  &-p {
+    padding-bottom: calc(var(--footer-button-height, unit(50)) + constant(safe-area-inset-bottom));
+    padding-bottom: calc(var(--footer-button-height, unit(50)) + env(safe-area-inset-bottom));
+  }
+  &-m {
+    margin-bottom: calc(var(--footer-button-height, unit(50)) + constant(safe-area-inset-bottom));
+    margin-bottom: calc(var(--footer-button-height, unit(50)) + env(safe-area-inset-bottom));
+  }
+}
+
+.safeArea-p {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safeArea-m {
+  margin-bottom: constant(safe-area-inset-bottom);
+  margin-bottom: env(safe-area-inset-bottom);
+}

@@ -1,0 +1,56 @@
+$types: w, h, wh;
+
+@function mode($type) {
+  @if $type == h {
+    @return height;
+  } @else {
+    @return width;
+  }
+}
+
+.icon {
+  @for $v from 6 through 50 {
+    $i: $v * 2;
+    &-#{$i} {
+      width: unit($i);
+      height: unit($i);
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  @each $type in $types {
+    .#{$type}-#{$i * 25} {
+      @if ($type == wh) {
+        width: $i * 25%;
+        height: $i * 25%;
+      } @else {
+        #{mode($type)}: $i * 25%;
+      }
+    }
+  }
+}
+.wh,
+.w {
+  &-screen {
+    width: 100vw;
+  }
+  &-auto {
+    width: auto;
+  }
+}
+.wh,
+.h {
+  &-screen {
+    height: 100vh;
+  }
+  &-auto {
+    height: auto;
+  }
+}
+
+@for $i from 12 through 25 {
+  .line-h#{$i} {
+    line-height: unit($i);
+  }
+}

@@ -1,0 +1,131 @@
+$types: bg, text;
+
+@function mode($type) {
+  @if $type == text {
+    @return color;
+  } @else {
+    @return background;
+  }
+}
+.bg-base {
+  background-color: $background-color;
+}
+
+@each $type in $types {
+  .#{$type} {
+    &-white {
+      #{mode($type)}: $white;
+    }
+    &-black {
+      #{mode($type)}: $black;
+    }
+
+    &-primary {
+      #{mode($type)}: $primary;
+      &-light-1 {
+        #{mode($type)}: $primary-light-1;
+      }
+      &-light-2 {
+        #{mode($type)}: $primary-light-2;
+      }
+      &-light-3 {
+        #{mode($type)}: $primary-light-3;
+      }
+      &-light-4 {
+        #{mode($type)}: $primary-light-4;
+      }
+      &-light-5 {
+        #{mode($type)}: $primary-light-5;
+      }
+      &-light-6 {
+        #{mode($type)}: $primary-light-6;
+      }
+      &-light-7 {
+        #{mode($type)}: $primary-light-7;
+      }
+      &-light-8 {
+        #{mode($type)}: $primary-light-8;
+      }
+      &-light-9 {
+        #{mode($type)}: $primary-light-9;
+      }
+    }
+
+    &-green {
+      #{mode($type)}: $green;
+      &-soft {
+        #{mode($type)}: $green-soft
+      }
+      &-light {
+        #{mode($type)}: $green-light
+      }
+      &-lighter {
+        #{mode($type)}: $green-lighter
+      }
+      &-extra-light {
+        #{mode($type)}: $green-extra-light
+      }
+    }
+    &-orange {
+      #{mode($type)}: $orange;
+      &-soft {
+        #{mode($type)}: $orange-soft
+      }
+      &-light {
+        #{mode($type)}: $orange-light
+      }
+      &-lighter {
+        #{mode($type)}: $orange-lighter
+      }
+      &-extra-light {
+        #{mode($type)}: $orange-extra-light
+      }
+    }
+    &-yellow {
+      #{mode($type)}: $yellow;
+      &-soft {
+        #{mode($type)}: $yellow-soft
+      }
+      &-light {
+        #{mode($type)}: $yellow-light
+      }
+      &-lighter {
+        #{mode($type)}: $yellow-lighter
+      }
+      &-extra-light {
+        #{mode($type)}: $yellow-extra-light
+      }
+    }
+    &-red {
+      #{mode($type)}: $red;
+      &-soft {
+        #{mode($type)}: $red-soft
+      }
+      &-light {
+        #{mode($type)}: $red-light
+      }
+      &-lighter {
+        #{mode($type)}: $red-lighter
+      }
+      &-extra-light {
+        #{mode($type)}: $red-extra-light
+      }
+    }
+
+    &-regular {
+      #{mode($type)}: $gray-8;
+    }
+    &-secondary {
+      #{mode($type)}: $gray-7;
+    }
+    &-placeholder {
+      #{mode($type)}: $placeholder;
+    }
+    &-light {
+      #{mode($type)}: $gray-4;
+    }
+    &-lighter {
+      #{mode($type)}: $gray-2;
+    }
+  }
+}
