@@ -1,6 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 
-Vue.config.productionTip = false
+import http from './setup/http';
 
-new App().$mount()
+Vue.config.productionTip = false;
+
+Vue.prototype.$http = http;
+
+new App().$mount();
