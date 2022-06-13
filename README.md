@@ -1,15 +1,20 @@
 # common-uni-template
 
-## TODO-Custom
-
-- 全局搜索 TODO-Custom 即可找到需要自定义配置的位置
-
 ## 参考资料
 
 - [路由使用](https://hhyang.cn/v2/start/applets/explian.html)
 - [uni-ui 演示地址](https://hellouniapp.dcloud.net.cn/pages/component/view/view)
 - [uni-app 自定义组件说明](https://uniapp.dcloud.io/vue-components)
 - [uview-ui](https://www.uviewui.com/components/intro.html)
+- [husky 配置](https://juejin.cn/post/6982192362583752741)
+
+## TODO-Custom
+
+- 全局搜索 TODO-Custom 即可找到需要自定义配置的位置
+
+## husky
+
+- 依赖安装完毕后，使用`git add .husky/commit-msg`和`git add .husky/pre-commit`添加 git hook
 
 ## 请求
 
