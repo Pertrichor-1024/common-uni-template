@@ -104,15 +104,16 @@ class BaseStorage {
     });
   }
 
-  /** 移除所有以 `data_` 开头的数据 */
-  removeAllData() {
-    // TODO: 没有 data_ 开头的也归于 data
-    this._removeData('data_');
-  }
-
-  /** 移除用户相关数据 `user_` 开头的本地数据 */
-  removeAllUser() {
-    this._removeData('user_');
+  /**
+   *  移除所有以 prefix 开头的数据
+   *
+   *  @param {String} prefix 前缀
+   *  ```js
+   *    removeAll('user'); 移除所有以user开头的本地缓存
+   *  ```
+   * */
+  removeAll(prefix: string) {
+    this._removeData(`${prefix}_`);
   }
 }
 
