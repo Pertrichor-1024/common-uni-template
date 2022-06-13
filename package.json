@@ -147,8 +147,5 @@
   "vetur": {
     "tags": ".vscode/vetur/tags.json",
     "attributes": ".vscode/vetur/attributes.json"
-  },
-  "husky": {
-    "hooks": {}
   }
 }

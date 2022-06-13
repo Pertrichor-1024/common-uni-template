@@ -14,7 +14,7 @@
 
 ## husky
 
-- 依赖安装完毕后，使用`git add .husky/commit-msg`和`git add .husky/pre-commit`添加 git hook
+- 依赖安装完毕后，使用`git add .husky/commit-msg`添加 git hook
 
 ## 请求
 
