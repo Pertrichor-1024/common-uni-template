@@ -20,11 +20,12 @@
 
 ### Header 设置
 
-| 属性            | 说明     | 类型   | 可选项 | 默认 |
-| --------------- | -------- | ------ | ------ | ---- |
-| `Authorization` | 权限令牌 | String | -      | -    |
+| 属性 | 说明 | 类型 | 可选项 | 默认 |
+| ---- | ---- | ---- | ------ | ---- |
 
-## 各平台差异判断
+## 微信开发者工具问题
+
+- 初次将包导入开发者工具时,需要将开发者工具 **_详情-->本地设置-->ES6 转 ES5_** 勾选框取消勾选
 
 ### 环境判断
 
@@ -63,84 +64,3 @@ onClick(item){
   console.log(item); // undefined;
 }
 ```
-
-- 组件上 `class` 问题
-
-## Mixins
-
-### ListMixins
-
-### ListTabsMixins
-
-## 常用写法
-
-- 表单
-
-```xml
-<uni-forms border ref="form">
-  <uni-forms-item name="mobile"
-                  :error-message="mobile.error">
-    <div class="flex-ac">
-      <span class="text-red">*</span>
-      <div class="cell-label-70">{{mobile.label}}</div>
-      <uni-easyinput v-model="mobile.value"
-                     :inputBorder="false"
-                     :placeholder="mobile.placeholder" />
-    </div>
-  </uni-forms-item>
-
-  <uni-forms-item name="mobile"
-                  :error-message="mobile.error">
-    <div class="flex-ac h-100">
-      <span class="text-red">*</span>
-      <div class="cell-label-70">{{school.label}}</div>
-      <div :class="{'text-placeholder': !school.value}"
-           class="flex-1 pl-10 ml-3">
-        {{school.value || '请输入学校或搜索筛选学校'}}
-      </div>
-      <sc-icon class="pr-10 pl-10 text-placeholder flex-ac"
-               name="search"
-               size="20" />
-    </div>
-  </uni-forms-item>
-</uni-forms>
-```
-
-- 设置图片
-
-```js
-async setImages(content: Dictionary[]) {
-  try {
-    const key = 'pic';
-    const ids = content.map((v) => v[key] && v[key].split(',')[0]).filter(Boolean);
-
-    if (!ids.length) return;
-
-    const imgUrls = (await this.$utils._GetImg(ids)) || [];
-
-    this.list = this.list.map((e) => {
-      const img = imgUrls.find((v) => e[key] && e[key].includes(v.id)) || {};
-      if (!img) return e;
-      return {
-        ...e,
-        remoteUrl: img.remoteUrl ? img.remoteUrl + ossImgZoom : '/static/images/logo.png',
-      };
-    });
-  } catch (error) {
-    this.$utils._GlobalHandleError(error);
-  }
-}
-```
-
-## 支付宝定位
-
-- 存在定位异常情况
-  1. 用户是否授权定位
-  2. 手机是否给 app 定位权限
-  3. 手机是否开定位
-
-1. 先检测是否开启定位(`getSetting`)
-
-2. 出现 `1` 的情况需要使用 `openSetting` 开启授权
-
-3. 出现 `2`、`3` 的情况需要使用 `my.showAuthGuide` 提示开启权限

@@ -1,0 +1,40 @@
+// 此文件为uView的主题变量，这些变量目前只能通过uni.scss引入才有效，另外由于
+// uni.scss中引入的样式会同时混入到全局样式文件和单独每一个页面的样式中，造成微信程序包太大，
+// 故uni.scss只建议放scss变量名相关样式，其他的样式可以通过main.js或者App.vue引入
+
+@import '../lib/scss/variables.scss';
+
+$u-main-color: $gray-8; // #303133
+$u-content-color: $gray-7; // #606266
+$u-tips-color: $gray-6; // #909399
+$u-light-color: $gray-5; // #c0c4cc
+$u-border-color: $border-color; // #e4e7ed
+$u-bg-color: $background-color; // #f3f4f6
+
+$u-type-primary: $primary;
+$u-type-primary-dark: $primary-light-3;
+$u-type-primary-disabled: $primary-light-6;
+$u-type-primary-light: $primary-light-9;
+
+$u-type-warning: $yellow;
+$u-type-warning-dark: $yellow-light;
+$u-type-warning-disabled: $yellow-lighter;
+$u-type-warning-light: $yellow-extra-light;
+
+$u-type-success: $green;
+$u-type-success-dark: $green-light;
+$u-type-success-disabled: $green-lighter;
+$u-type-success-light: $green-extra-light;
+
+$u-type-error: $red;
+$u-type-error-dark: $red-light;
+$u-type-error-disabled: $red-lighter;
+$u-type-error-light: $red-extra-light;
+
+$u-type-info: $gray-6; // #909399
+$u-type-info-disabled: $gray-5; // #c8c9cc
+$u-type-info-dark: #82848a; // #82848a
+$u-type-info-light: $gray-2; // #f4f4f5
+
+$u-form-item-height: 70rpx;
+$u-form-item-border-color: $border-color;
