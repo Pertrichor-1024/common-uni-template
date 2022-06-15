@@ -1,5 +1,5 @@
 <template>
-  <view>
+  <view class="p-10">
     <text>{{ title }}</text>
     <u-input placeholder="请输入"
              border></u-input>
