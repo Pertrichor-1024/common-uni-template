@@ -1,0 +1,32 @@
+{
+	"vetur.validation.template": true,
+	// 使用插件格式化 html
+	"vetur.format.defaultFormatter.html": "js-beautify-html",
+	// 格式化插件的配置
+	"vetur.format.defaultFormatterOptions": {
+		"js-beautify-html": {
+			// 属性强制折行对齐
+			"wrap_attributes": "force-aligned",
+			"end_with_newline": false,
+			"editorconfig": true
+		}
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+
+	"[vue]": {
+		"editor.defaultFormatter": "octref.vetur"
+	},
+
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"files.eol": "\n",
+	"typescript.tsdk": "node_modules/typescript/lib"
+}

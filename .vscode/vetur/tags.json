@@ -1,0 +1,22 @@
+{
+  "sc-upload": {
+    "description": "上传组件",
+    "attributes": [
+      "v-model (value)",
+      "title",
+      "disabled",
+      "readonly",
+      "disable-preview",
+      "delIcon",
+      "limit",
+      "mode",
+      "type",
+      "accept",
+      "maxSize",
+      "custom",
+      "return-field",
+      "list-styles",
+      "image-styles"
+    ]
+  }
+}
