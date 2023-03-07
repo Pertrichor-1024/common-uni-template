@@ -38,7 +38,6 @@ export default class Http {
       http
         .request({ url: u, ...d, ...c })
         .then((res) => {
-          // TODO-Custom statusCode是自定义字段,根据后端返回结果变更
           if (res.statusCode === 200) {
             resolve(res.data);
             return;

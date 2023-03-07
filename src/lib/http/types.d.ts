@@ -18,7 +18,7 @@ interface Loading {
 
 // TODO-Custom 自定义全局请求头
 interface Header extends Dictionary {
-  Authorization?: string | null; // 一般用此字段存Token,根据实际情况更改,和@/setup/http.ts为文件中的23行字段保持一致
+  Authorization?: string | null; // 一般用此字段存Token,根据实际情况更改,和@/setup/http.ts为文件中的20行字段保持一致
 }
 
 interface RequestConfig extends HttpRequestConfig<UniApp.RequestTask>, Loading {

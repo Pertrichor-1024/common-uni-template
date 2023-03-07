@@ -1,8 +1,5 @@
-import Vue from 'vue';
 import Http from '@/lib/http';
 import Storage from '@/utils/storage';
-
-const vm = new Vue();
 
 const Token = () => {
   const Authorization = Storage.get('token');
@@ -39,11 +36,13 @@ http.setInterceptor({
     (res) => {
       console.log('响应链接 :', res.config.url);
       console.log('响应数据 :', res);
+      // TODO-Custom 可在此处添加响应拦截
       return res;
     },
     async (error) => {
       console.log('响应错误 :', error);
 
+      // TODO-Custom token过期处理,默认重新登陆,然后调用之前接口
       if (error.statusCode === 401) {
         Storage.remove('token');
         console.log('------401错误请求重新获取Token------');
@@ -71,4 +70,3 @@ http.setInterceptor({
 });
 
 export default http;
-
