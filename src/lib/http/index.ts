@@ -54,7 +54,7 @@ export default class Http {
   get: RequestCallback = (u, d = {}, c) => this.baseHttp(u, { params: d }, { ...c, method: 'GET' });
 
   post: RequestCallback = (u, d = {}, c) => {
-    return this.baseHttp(u, { params: d }, { ...c, method: 'POST' });
+    return this.baseHttp(u, { data: d }, { ...c, method: 'POST' });
   };
 
   request(...args: Parameters<Request['request']>) {
