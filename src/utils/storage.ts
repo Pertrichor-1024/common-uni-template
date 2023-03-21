@@ -97,7 +97,7 @@ class BaseStorage {
   }
 
   protected _removeData(prefix: string) {
-    const reg = new RegExp(`^${this._prefix}${prefix}`);
+    const reg = new RegExp(`^${prefix}`);
     const data_keys = this.keys().filter((key) => reg.test(key));
     data_keys.forEach((key) => {
       this.remove(key);
