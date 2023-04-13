@@ -116,9 +116,5 @@
   },
   "uni-app": {
     "scripts": {}
-  },
-  "vetur": {
-    "tags": ".vscode/vetur/tags.json",
-    "attributes": ".vscode/vetur/attributes.json"
   }
 }
