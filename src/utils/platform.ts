@@ -10,6 +10,11 @@ export function isH5() {
 export function isWeixin() {
   return process.env.VUE_APP_PLATFORM === 'mp-weixin';
 }
+/** 企业微信 */
+export function isEnterpriseWeiXin() {
+  const { environment } = wx.getSystemInfoSync();
+  return environment === 'wxwork';
+}
 /** App */
 export function isAppPlus() {
   return process.env.VUE_APP_PLATFORM === 'app-plus';
