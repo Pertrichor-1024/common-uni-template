@@ -1,7 +1,7 @@
 /**
  * @desc 企业微信小程序 api
  * @date 2023/04/14
- * @author ShineShao <lize981001@gmail.com>
+ * @author Pertrichor-1024 <lize981001@gmail.com>
  */
 declare namespace WechatMiniprogram {
   interface SystemInfo {
